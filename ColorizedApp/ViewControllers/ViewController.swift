@@ -12,11 +12,7 @@ protocol EditViewControllerDelegate: AnyObject {
 }
 
 final class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = UIColor(red: 0.00, green: 0.00, blue: 0.00, alpha: 1)
-    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let editVC = segue.destination as? EditViewController
         editVC?.delegate = self
